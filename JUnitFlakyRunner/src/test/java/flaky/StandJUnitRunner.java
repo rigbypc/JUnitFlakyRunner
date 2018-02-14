@@ -8,36 +8,36 @@ public class StandJUnitRunner {
 	@Test
 	public void testPerfect() {
 		//originally 1
-		Threader fc = new Threader(1);
-		assertTrue(fc.threadProcessed());
+		RandomNormal randomNormal = new RandomNormal(1);
+		assertTrue(randomNormal.get());
 	}
 	
 	@Test
 	public void testGetWorse() {
 		//originally .9
-		Threader fc = new Threader(.90);
-		assertTrue(fc.threadProcessed());
+		RandomNormal randomNormal = new RandomNormal(.90);
+		assertTrue(randomNormal.get());
 	}
 	
 	@Test
 	public void testGetBetter() {
 		//originally .75
-		Threader fc = new Threader(.75);
-		assertTrue(fc.threadProcessed());
+		RandomNormal randomNormal = new RandomNormal(.75);
+		assertTrue(randomNormal.get());
 	}
 	
 	@Test
 	public void testTrueRandom() {
 		//originally .5
-		Threader fc = new Threader(.5);
-		assertTrue(fc.threadProcessed());
+		RandomNormal randomNormal = new RandomNormal(.5);
+		assertTrue(randomNormal.get());
 	}
 	
 	@Test
 	public void testMostlyFail() {
 		//originally .1
-		Threader fc = new Threader(.1);
-		assertTrue(fc.threadProcessed());
+		RandomNormal randomNormal = new RandomNormal(.1);
+		assertTrue(randomNormal.get());
 	}
 	
 	@Test
