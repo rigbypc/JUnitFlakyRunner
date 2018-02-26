@@ -4,9 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-public class StandJUnitRunner {
-	
+import rigby.junit.flaky.runners.Flaky;
+import rigby.junit.flaky.runners.FlakyThreeRunner;
+
+@RunWith(value=FlakyThreeRunner.class)
+public class TestFlakyThreeRunner {
+
 	RandomNormal randomNormal;
 	
 	@Before
@@ -19,17 +24,17 @@ public class StandJUnitRunner {
 		assertTrue(randomNormal.getRandom(1));
 	}
 	
-	@Test
+	@Test @Flaky
 	public void testMostlyPass() {
 		assertTrue(randomNormal.getRandom(.9));
 	}
 	
-	@Test
+	@Test @Flaky
 	public void testMostlyFail() {
 		assertTrue(randomNormal.getRandom(.10));
 	}
 	
-	@Test
+	@Test @Flaky
 	public void testAllFails() {
 		assertTrue(false);
 	}

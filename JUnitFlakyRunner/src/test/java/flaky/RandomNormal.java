@@ -3,18 +3,15 @@ package flaky;
 import java.util.Random;
 
 public class RandomNormal {
-
-	double passProbability = 1;
 	
-	public RandomNormal(double passProbability) {
-		this.passProbability = passProbability;
+	public RandomNormal() {
 	}
 	
-	public boolean get() {
+	public boolean getRandom(double passProbability) {
 		Random rand = new Random();
-		int num = rand.nextInt(1000) + 1;
+		int num = rand.nextInt(100) + 1;
 		
-		if (num <= 1000*passProbability) {
+		if (num <= 100*passProbability) {
 			return true;
 		}
 		

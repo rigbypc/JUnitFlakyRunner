@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>JUnitFlakyRunner</name>
+	<name>FlakyJUnitRunner</name>
 	<comment>Project FlakyJUnitRunner created by Buildship.</comment>
 	<projects>
 	</projects>
